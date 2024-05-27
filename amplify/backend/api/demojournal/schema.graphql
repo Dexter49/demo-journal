@@ -1,0 +1,9 @@
+type TravelEntry @model {
+  id: ID!
+  title: String!
+  description: String
+  location: String
+  startDate: String
+  endDate: String
+  media: [String]
+}
