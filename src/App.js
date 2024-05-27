@@ -1,13 +1,10 @@
 import React from 'react';
-import { withAuthenticator } from '@aws-amplify/ui-react';
+import ReactDOM from 'react-dom';
 import TravelJournal from './TravelJournal';
+import './assets/styles/App.css';
+import Amplify from 'aws-amplify';
+import config from './aws-exports';
 
-function App() {
-  return (
-    <div className="App">
-      <TravelJournal />
-    </div>
-  );
-}
+Amplify.configure(config);
 
-export default withAuthenticator(App);
+ReactDOM.render(<TravelJournal />, document.getElementById('root'));
